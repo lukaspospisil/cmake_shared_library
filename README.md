@@ -9,6 +9,8 @@ cd cmake_shared_library
 ## compile library with cmake
 
 ```
+export CRAYPE_LINK_TYPE=dynamic
+
 mkdir build
 cd build
 cmake ..
@@ -25,13 +27,3 @@ cmake ..
 make
 ./myexample
 ```
-## compile library without cmake
-
-```
-mkdir build
-cd build
-mkdir lib
-c++ -shared -fPIC ../src/myfunctions.cpp -I../include
-c++ -fPIC -shared -o lib/libmysamplelibrary.so a.out
-```
-
